@@ -128,13 +128,8 @@ sudo systemctl enable docker
 
 13
 
-su - elastic
 
-
-
-14
-
-bash <(curl -fsSL https://download.elastic.co/cloud/elastic-cloud-enterprise.sh) install --force --availability-zone POC-01 --memory-settings '{"runner":{"xms":"4G","xmx":"4G"},"allocator":{"xms":"4G","xmx":"4G"},"zookeeper":{"xms":"4G","xmx":"4G"},"director":{"xms":"4G","xmx":"4G"},"constructor":{"xms":"4G","xmx":"4G"},"admin-console":{"xms":"4G","xmx":"4G"}}'
+runuser -l elastic -c "bash <(curl -fsSL https://download.elastic.co/cloud/elastic-cloud-enterprise.sh) install --force --availability-zone POC-01 --memory-settings '{"runner":{"xms":"4G","xmx":"4G"},"allocator":{"xms":"4G","xmx":"4G"},"zookeeper":{"xms":"4G","xmx":"4G"},"director":{"xms":"4G","xmx":"4G"},"constructor":{"xms":"4G","xmx":"4G"},"admin-console":{"xms":"4G","xmx":"4G"}}'"
 
 
 sudo rm -rf /tmp/ECE.sh
