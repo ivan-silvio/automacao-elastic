@@ -131,7 +131,7 @@ sudo systemctl enable docker
 
 
 
-runuser -l elastic -c "bash <(curl -fsSL https://download.elastic.co/cloud/elastic-cloud-enterprise.sh) install --coordinator-host $meucluster --roles-token $MY_TOKEN --roles "director,coordinator" --availability-zone POC-02 --memory-settings '{"runner":{"xms":"1G","xmx":"1G"},"zookeeper":{"xms":"1G","xmx":"1G"},"director":{"xms":"1G","xmx":"1G"},"constructor":{"xms":"1G","xmx":"1G"},"admin-console":{"xms":"1G","xmx":"1G"}}'"
+runuser -l elastic -c "bash <(curl -fsSL https://download.elastic.co/cloud/elastic-cloud-enterprise.sh) install --force --coordinator-host $meucluster --roles-token $MY_TOKEN --roles "director,coordinator" --availability-zone POC-03 --memory-settings '{"runner":{"xms":"1G","xmx":"1G"},"zookeeper":{"xms":"4G","xmx":"4G"},"director":{"xms":"1G","xmx":"1G"},"constructor":{"xms":"4G","xmx":"4G"},"admin-console":{"xms":"4G","xmx":"4G"}}'"
 
 
 
