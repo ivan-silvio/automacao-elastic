@@ -112,9 +112,9 @@ sudo usermod -a -G docker elastic
 11
 
 
-
 sudo mkdir /mnt/data
 
+sudo mkdir /mnt/data/elastic/ 
 
 sudo chmod -R 777 /mnt/data/
 
