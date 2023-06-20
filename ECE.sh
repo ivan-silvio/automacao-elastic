@@ -17,21 +17,21 @@
 #sudo yum install -y yum-utils
 #sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
-sudo yum -y update
+#sudo yum -y update
 
-sudo yum install -y epel-release
+#sudo yum install -y epel-release
 
-sudo yum-config-manager --enable repository CentOS-7-Base  CentOS-7 - Extras CentOS-7-Updates
+#sudo yum-config-manager --enable repository CentOS-7-Base  CentOS-7 - Extras CentOS-7-Updates
 
-yum install -y yum-utils
+#yum install -y yum-utils
 
-sudo yum clean all
+#sudo yum clean all
 
-sudo yum makecache
+#sudo yum makecache
 
 3
 
-sudo yum install -y docker-ce-20.10* docker-ce-cli-20.10* containerd.io-1.5.*
+#sudo yum install -y docker-ce-20.10* docker-ce-cli-20.10* containerd.io-1.5.*
 
 #yum install git  wget 
 
