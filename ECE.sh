@@ -2,14 +2,14 @@
 
 #1
 
-sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
-[dockerrepo]
-name=Docker Repository
-baseurl=https://download.docker.com/linux/centos/7/x86_64/stable
-enabled=1
-gpgcheck=1
-gpgkey=https://download.docker.com/linux/centos/gpg
-EOF
+#sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+#[dockerrepo]
+#name=Docker Repository
+#baseurl=https://download.docker.com/linux/centos/7/x86_64/stable
+#enabled=1
+#gpgcheck=1
+#gpgkey=https://download.docker.com/linux/centos/gpg
+#EOF
 
 sudo yum -y update
 
