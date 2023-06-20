@@ -35,15 +35,15 @@
 
 #yum install git  wget 
 
-sudo yum install -y python3 
+#sudo yum install -y python3 
 
 #sudo yum install python-pip
 
 sudo yum install -y vim vi
 
-pip3 install --upgrade pip
+#pip3 install --upgrade pip
 
-pip3 install ansible
+#pip3 install ansible
 
 
 4
