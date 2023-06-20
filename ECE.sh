@@ -23,6 +23,16 @@ sudo yum clean all
 
 sudo yum makecache
 
+
+###validacao
+echo "overlay" | sudo tee -a /etc/modules-load.d/overlay.conf
+
+sudo grub2-set-default 0
+sudo grub2-mkconfig -o /etc/grub2.cfg
+
+sudo /sbin/grubby --update-kernel=ALL --args='cgroup_enable=memory cgroup.memory=nokmem swapaccount=1'
+
+
 3
 
 sudo yum install -y docker-ce-20.10* docker-ce-cli-20.10* containerd.io-1.5.*
