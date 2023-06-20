@@ -12,10 +12,13 @@
 #EOF
 
 
-sudo yum install rhel-7-server-extras-rpms rhel-7-server-optional-rpms
+#sudo yum install rhel-7-server-extras-rpms rhel-7-server-optional-rpms
 
 #subscription-manager repos --enable rhel-7-server-optional-rpms
 #subscription-manager repos --enable rhel-7-server-extras-rpms
+
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
 sudo yum -y update
 
