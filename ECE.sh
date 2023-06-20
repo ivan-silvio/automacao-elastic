@@ -11,6 +11,12 @@
 #gpgkey=https://download.docker.com/linux/centos/gpg
 #EOF
 
+
+sudo yum install rhel-7-server-extras-rpms rhel-7-server-optional-rpms
+
+#subscription-manager repos --enable rhel-7-server-optional-rpms
+#subscription-manager repos --enable rhel-7-server-extras-rpms
+
 sudo yum -y update
 
 sudo yum install -y epel-release
