@@ -138,6 +138,8 @@ sudo systemctl start docker
 
 sudo systemctl enable docker
 
+#sudo systemctl disable docker
+
 13
 
 init 6
