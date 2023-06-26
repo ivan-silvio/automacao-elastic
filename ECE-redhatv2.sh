@@ -13,10 +13,6 @@ EOF
 
 sudo yum -y update
 
-sudo yum install -y epel-release
-
-sudo yum-config-manager --enable repository CentOS-7-Base  CentOS-7 - Extras CentOS-7-Updates
-
 yum install -y yum-utils
 
 sudo yum clean all
