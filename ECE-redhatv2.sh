@@ -11,7 +11,18 @@ gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
 EOF
 
+# Add yum config manager
+sudo -y yum install -y 'dnf-command(config-manager)'
+
+# Add the docker-ce centos yum repo
+sudo yum -y config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+
+
+sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+
 sudo yum -y update
+
 
 yum install -y yum-utils
 
@@ -31,7 +42,12 @@ sudo /sbin/grubby --update-kernel=ALL --args='cgroup_enable=memory cgroup.memory
 
 3
 
-sudo yum install -y docker-ce-20.10* docker-ce-cli-20.10* containerd.io-1.5.*
+
+sudo yum install -y containerd.io-1.6.*  --nobest --allowerasing
+
+
+sudo yum install -y docker-ce-20.10* docker-ce-cli-20.10*
+
 
 #yum install git  wget 
 
@@ -67,8 +83,9 @@ EOF
 
 RHEL/CentOS 7:
 
+
 sudo sysctl -p
-sudo systemctl restart network
+sudo systemctl restart NetworkManager
 
 6
 
